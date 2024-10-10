@@ -32,7 +32,7 @@ const addProduct = async (req, res) => {
     await newProduct.save();
     res.status(201).json(newProduct);
   } catch (error) {
-    console.error(error);
+    console.error("Error al agregar el producto:", error.message);
     res.status(500).json({ message: "Error al agregar el producto." });
   }
 };
