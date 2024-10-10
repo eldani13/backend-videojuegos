@@ -1,0 +1,1 @@
+Backend se inicia con "npm start" junto a la base de datos
