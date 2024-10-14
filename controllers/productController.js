@@ -11,9 +11,7 @@ const addProduct = async (req, res) => {
     type,
     isFeatured,
   } = req.body;
-  // const image = req.file ? `uploads/${req.file.filename}` : "";
-  const image = req.file ? `https://backend-videojuegos.onrender.com/uploads/${req.file.filename}` : "";
-
+  const image = req.file ? `uploads/${req.file.filename}` : "";
 
   const features = req.body.features ? req.body.features : [];
 
@@ -80,9 +78,7 @@ const updateProduct = async (req, res) => {
     type,
     isFeatured,
   } = req.body;
-  // const image = req.file ? `uploads/${req.file.filename}` : "";
-  const image = req.file ? `https://backend-videojuegos.onrender.com/uploads/${req.file.filename}` : "";
-
+  const image = req.file ? `uploads/${req.file.filename}` : "";
 
   const features = req.body.features ? req.body.features : [];
 
