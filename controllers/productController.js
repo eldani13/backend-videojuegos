@@ -1,4 +1,5 @@
 const Product = require("../models/Product");
+const { upload } = require('../config/cloudinary');
 
 const addProduct = async (req, res) => {
   const {
@@ -11,7 +12,8 @@ const addProduct = async (req, res) => {
     type,
     isFeatured,
   } = req.body;
-  const image = req.file ? `uploads/${req.file.filename}` : "";
+  // const image = req.file ? `uploads/${req.file.filename}` : "";
+  const image = req.file ? req.file.path : '';
 
   const features = req.body.features ? req.body.features : [];
 
@@ -78,7 +80,8 @@ const updateProduct = async (req, res) => {
     type,
     isFeatured,
   } = req.body;
-  const image = req.file ? `uploads/${req.file.filename}` : "";
+  // const image = req.file ? `uploads/${req.file.filename}` : "";
+  const image = req.file ? req.file.path : '';
 
   const features = req.body.features ? req.body.features : [];
 

@@ -1,6 +1,7 @@
 const express = require('express');
 const { addProduct, getAllProducts, updateProduct, deleteProduct, getProductById, highlightProduct } = require('../controllers/productController');
-const upload = require('../middlewares/uploadMiddleware');
+// const upload = require('../middlewares/uploadMiddleware');
+const { upload } = require('../config/cloudinary');
 
 const router = express.Router();
 
