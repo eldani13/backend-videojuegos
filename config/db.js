@@ -18,7 +18,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI || "mongodb+srv://llluis123:Mi3rULGzP5Zy1aaN@digitalgames.2pxff.mongodb.net/?retryWrites=true&w=majority&appName=digitalgames", {
+    const conn = await mongoose.connect(process.env.MONGO_URI || "mongodb+srv://llluis123:Mi3rULGzP5Zy1aaN@digitalgames.2pxff.mongodb.net/digitalgames?retryWrites=true&w=majority&appName=digitalgames", {
       // useNewUrlParser: true,
       // useUnifiedTopology: true,
     });
